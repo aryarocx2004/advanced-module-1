@@ -339,7 +339,7 @@ If the key is bronze, then total suply gets incremented by +1000
 
 ## Authors
 
-Aray pg 
+Arya pg 
 
 aryapg2004@gmail.com
 
