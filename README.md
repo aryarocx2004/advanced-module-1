@@ -27,9 +27,18 @@ and
 #### getRandomKeyType Function:
 
 This function uses the hash of the previous block to generate a random key type (KeyType).
-To obtain the hash of the preceding block, use blockhash(block.number - 1).
-The hash is transformed into an unsigned integer (uint).
-Next, the key type is ascertained using the outcome: KeyType matches to 0.One to KeyType in bronze.Then two to KeyType and silver.Gold.
+
+To obtain the hash of the preceding block, we use the blockhash(block.number - 1).
+
+This transforms th  hash into an unsigned integer (uint).
+
+Next, we acertain the key type using the outcome: 
+
+1. KeyType matches to 0. 
+
+2. One to KeyType in bronze.
+
+3. Then two to KeyType and silver.Gold.
 
 
 ```
@@ -51,15 +60,19 @@ function getRandomKeyType() private view returns (KeyType) {
 
 #### claimRandomKey Function:
 
-For the caller, this function claims a random key.
+This function claims a random key, when it is called.
+
 To find the key type, it makes a call to getRandomKeyType.
+
 It sets the tokensReceived variable based on the kind of key.
-updates the caller's balance and the overall supply using the tokens that were received.
-logs the token transfer by emitting the Transfer event.
-Indicates the type of key and tokens received by emitting the KeyReceived event.
-transforms the key type into a keyTypeString string representation.
-With the received tokens and the key type string, emits the KeyClaimed event.
-logs the key type's string value using the KeyClaimedWithStringValue event.
+
+Then it updates the caller's balance and the overall supply using the tokens that were received.
+
+It then logs the token transfer by emitting the Transfer event.
+
+It indicates the type of key and tokens received by emitting the KeyReceived event and ransforms the key type into a keyTypeString string representation.
+
+With the received tokens and the key type string, emits the KeyClaimed event and logs the key type's string value using the KeyClaimedWithStringValue event.
 
 '''
 
