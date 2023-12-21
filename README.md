@@ -4,6 +4,12 @@ This is a solidity program which implements the claimRandomKey function where in
 
 This is a simple contract for exploration-based gaming experience in he DeFi kingdom where the user collects various keys to increase his number of tokens in his account.
 
+If the key found is gold, then total suply gets incremented by +2000
+
+If the key found is silver, then total suply gets incremented by +1500
+
+If the key found is bronze, then total suply gets incremented by +1000
+
 ## Description
 
 ### ERC-20 Contract
