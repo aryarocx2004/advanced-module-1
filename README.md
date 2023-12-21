@@ -33,6 +33,7 @@ Next, the key type is ascertained using the outcome: KeyType matches to 0.One to
 
 
 ```
+
 function getRandomKeyType() private view returns (KeyType) {
     bytes32 hash = blockhash(block.number - 1); // Use the previous block's hash
     uint randomNumber = uint(hash) % 3;
@@ -61,6 +62,7 @@ With the received tokens and the key type string, emits the KeyClaimed event.
 logs the key type's string value using the KeyClaimedWithStringValue event.
 
 '''
+
 function claimRandomKey() external {
     KeyType keyType = getRandomKeyType();
     uint tokensReceived;
