@@ -24,7 +24,7 @@ where
 
 and
 
-### getRandomKeyType Function:
+#### getRandomKeyType Function:
 
 This function uses the hash of the previous block to generate a random key type (KeyType).
 To obtain the hash of the preceding block, use blockhash(block.number - 1).
@@ -48,7 +48,7 @@ function getRandomKeyType() private view returns (KeyType) {
 
 ```
 
-### claimRandomKey Function:
+#### claimRandomKey Function:
 
 For the caller, this function claims a random key.
 To find the key type, it makes a call to getRandomKeyType.
@@ -97,6 +97,11 @@ function claimRandomKey() external {
 }
 
 '''
+
+### Vault contract
+
+In order to manage deposits and withdrawals of the ERC20 token, the Vault contract communicates with the token. The Vault contract is a simple interface that manages deposits and withdrawals of the XGN token. It communicates with the token.
+
 
 ## Executing program
 
@@ -322,4 +327,20 @@ We then switch to the Injected Provider environment.
 
 You can engage with the contract to mint, burn, and transfer tokens after it is launched. 
 
+By interacting with the claimRandomKey operator function, we cam see that out totalsupply gets updated in sequence with the key found.
 
+If the key is gold, then total suply gets incremented by +2000
+
+If the key is silver, then total suply gets incremented by +1500
+
+If the key is bronze, then total suply gets incremented by +1000
+
+## Authors
+
+Aray pg 
+
+aryapg2004@gmail.com
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
