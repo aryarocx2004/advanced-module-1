@@ -324,9 +324,9 @@ contract Vault {
 
 To set-up the Avalanche EVM subnet, we need RPC URL, token symbol and Chain ID.
 
-Subnet name: mysubnet
+Subnet name: mySubnet
 
-RPC URL: 
+RPC URL: http://127.0.0.1:9650/ext/bc/2N3RvHRLrfQE6wsxaKeL174Sjufn824YUtVJtNzSBpU4ok7rDF/rpc
 
 Chain ID: 1210
 
